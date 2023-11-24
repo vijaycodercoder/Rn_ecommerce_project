@@ -12,6 +12,8 @@ const Cards = () => {
             image: require('../images/redShoes.png'),
             price: 150,
             off: '20%',
+            rating: 4.9,
+            description: 'High-performance running shoes from Adidas suitable for all types of runners.',
         },
         {
             id: '2',
@@ -19,6 +21,8 @@ const Cards = () => {
             image: require('../images/SmartwatchPro.png'),
             price: 300,
             off: '15%',
+            rating: 4.7,
+            description: 'Advanced smartwatch with fitness tracking, heart rate monitoring, and more.',
         },
         {
             id: '3',
@@ -26,6 +30,8 @@ const Cards = () => {
             image: require('../images/TravelBackpack.png'),
             price: 180,
             off: '10%',
+            rating: 4.1,
+            description: 'Spacious and durable backpack, perfect for travel and outdoor activities.',
         },
         {
             id: '4',
@@ -33,6 +39,8 @@ const Cards = () => {
             image: require('../images/CasualSneakers.png'),
             price: 120,
             off: '25%',
+            rating: 4.5,
+            description: 'Comfortable and stylish casual sneakers for everyday wear.',
         },
         {
             id: '5',
@@ -40,6 +48,8 @@ const Cards = () => {
             image: require('../images/LeatherWallet.png'),
             price: 50,
             off: '30%',
+            rating: 3.3,
+            description: 'Genuine leather wallet with multiple card slots and a sleek design.',
         },
         {
             id: '6',
@@ -47,6 +57,8 @@ const Cards = () => {
             image: require('../images/WirelessEarbuds.png'),
             price: 80,
             off: '12%',
+            rating: 4,
+            description: 'High-quality wireless earbuds with noise cancellation and long battery life.',
         },
         {
             id: '7',
@@ -54,6 +66,8 @@ const Cards = () => {
             image: require('../images/RunningShorts.png'),
             price: 40,
             off: '18%',
+            rating: 5,
+            description: 'Breathable and lightweight running shorts for a comfortable workout.',
         },
         {
             id: '8',
@@ -61,6 +75,8 @@ const Cards = () => {
             image: require('../images/GymDuffelBag.png'),
             price: 90,
             off: '22%',
+            rating: 3,
+            description: 'Spacious gym duffel bag with compartments for all your workout essentials.',
         },
         {
             id: '9',
@@ -68,6 +84,8 @@ const Cards = () => {
             image: require('../images/DesignerSunglasses.png'),
             price: 200,
             off: '8%',
+            rating: 5,
+            description: 'Fashionable designer sunglasses with UV protection for a stylish look.',
         },
         {
             id: '10',
@@ -75,8 +93,11 @@ const Cards = () => {
             image: require('../images/SlimFitJeans.png'),
             price: 60,
             off: '15%',
+            rating: 3,
+            description: 'Comfortable and trendy slim fit jeans for a modern and stylish appearance.',
         },
     ];
+
 
 
     const Card = ({ item }) => (

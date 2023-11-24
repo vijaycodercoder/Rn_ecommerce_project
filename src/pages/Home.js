@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native'
+import { Image, StyleSheet, Text, View, TouchableOpacity, ScrollView, StatusBar } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import Animated from 'react-native-reanimated'
@@ -15,6 +15,7 @@ const Home = () => {
     const { navigate, push } = navigation
     return (
         <View style={styles.container} >
+            <StatusBar backgroundColor={GlobalColors.bgColor} barStyle="dark-content" />
             {/* navbar */}
             <View style={styles.navbar}>
                 <Icon name="apps" size={25} color={GlobalColors.black} />
