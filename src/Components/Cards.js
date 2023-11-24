@@ -2,7 +2,9 @@ import React from 'react';
 import { FlatList, TouchableOpacity, View, Text, StyleSheet, Image, useWindowDimensions } from 'react-native';
 import { GlobalColors } from '../Assets/GlobalColors';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 const Cards = () => {
+    const Navigation = useNavigation()
     const DATA = [
         {
             id: '1',
@@ -79,7 +81,7 @@ const Cards = () => {
 
     const Card = ({ item }) => (
 
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity onPress={() => Navigation.navigate('Profile', { item })} style={styles.card}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
                 <Text style={{ fontWeight: '600', backgroundColor: GlobalColors.blue, padding: 5, borderRadius: 4 }}>
                     {item.off}

@@ -5,5 +5,7 @@ export const GlobalColors =
     gray: '#bebdc3',
     white: '#ffffff',
     green: '#4BB543',
-    blue: '#c7e2f3'
+    blue: '#c7e2f3',
+    accentColor: '#fcdfcd',
+    accentColor2: '#fdebdd',
 }
