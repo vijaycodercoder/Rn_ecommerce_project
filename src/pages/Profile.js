@@ -1,11 +1,10 @@
 import { StyleSheet, View, Image, Text, ScrollView, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Animated, { SlideInDown } from 'react-native-reanimated';
-import { FadeInLeft, FadeOut, BounceInUp, BounceInDown, FlipInEasyX } from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { GlobalColors } from '../Assets/GlobalColors';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { ZoomIn, PinwheelIn, LightSpeedInRight, LightSpeedInLeft, RollInRight, RollInLeft, StretchInX } from 'react-native-reanimated';
+import { ZoomIn, PinwheelIn, RollInRight, RollInLeft, StretchInX } from 'react-native-reanimated';
 
 const Profile = () => {
     const Navigation = useNavigation()
@@ -22,12 +21,12 @@ const Profile = () => {
             }}>
                 <TouchableOpacity onPress={() => Navigation.goBack()}>
                     <Animated.View entering={RollInLeft.delay(1000)}>
-
-                        <Icon name='arrow-back' size={40} color={GlobalColors.black} />
+                        <Icon name='arrow-back' size={32} color={GlobalColors.black} />
                     </Animated.View>
                 </TouchableOpacity>
+
                 <Animated.View entering={RollInRight.delay(1000)}>
-                    <Icon name='heart-circle' size={40} color='red' />
+                    <Icon name='heart-circle' size={32} color='red' />
                 </Animated.View>
             </View>
             <Animated.Text entering={StretchInX.delay(500)} style={{ fontWeight: '600', backgroundColor: GlobalColors.blue, padding: 5, borderRadius: 4, marginVertical: 20 }}>
@@ -113,17 +112,16 @@ const Profile = () => {
                 borderTopLeftRadius: 50,
                 borderTopRightRadius: 50,
                 alignItems: 'center'
-
             }}>
                 <Text style={{ fontSize: 32, fontWeight: 700, color: GlobalColors.black, paddingVertical: 10 }}>
                     ${item.price}.00
                 </Text>
-                <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: GlobalColors.blue, paddingHorizontal: 4, borderRadius: 10 }}>
+                <TouchableOpacity onPress={() => Navigation.navigate('Cart', { item })} style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: GlobalColors.blue, paddingHorizontal: 4, borderRadius: 10 }}>
                     <Icon name='cart' size={32} color={GlobalColors.black} />
                     <Text style={{ fontSize: 17, fontWeight: 500, color: GlobalColors.black, paddingVertical: 10, textAlign: 'center', marginHorizontal: 5 }}>
                         Add To Cart
                     </Text>
-                </View>
+                </TouchableOpacity>
 
             </Animated.View>
 

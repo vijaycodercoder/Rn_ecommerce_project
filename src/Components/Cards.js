@@ -124,7 +124,7 @@ const Cards = () => {
                 }}>
 
                 </View>
-                <Image style={{ width: 170, height: '80%', resizeMode: 'contain', position: 'absolute', elevation: 10, }} source={item.image} />
+                <Image style={{ width: 170, height: '80%', resizeMode: 'contain', position: 'absolute' }} source={item.image} />
 
             </View>
             <View>
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         padding: 10,
         alignItems: 'center',
         borderRadius: 10,
-        elevation: 5,
+
     },
     cardContent: {
         flex: 1,

@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View, TouchableOpacity, ScrollView, StatusBar } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import Animated from 'react-native-reanimated'
+import Animated, { SlideInDown } from 'react-native-reanimated'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { GlobalColors } from '../Assets/GlobalColors';
@@ -15,7 +15,7 @@ const Home = () => {
     const { navigate, push } = navigation
     return (
         <View style={styles.container} >
-            <StatusBar backgroundColor={GlobalColors.bgColor} barStyle="dark-content" />
+
             {/* navbar */}
             <View style={styles.navbar}>
                 <Icon name="apps" size={25} color={GlobalColors.black} />
@@ -36,19 +36,10 @@ const Home = () => {
             </View>
 
             {/* Cards */}
-            <ScrollView style={{ alignContent: 'center', width: '100%' }}>
+            <Animated.View entering={SlideInDown.delay(500).springify()} style={{ width: '100%' }}>
+                <Cards />
 
-                <View style={{
-                    // width: '100%',
-                    // minHeight: '50%',
-
-                    // flexDirection: 'row',
-                    // flexWrap: 'wrap',
-                    // justifyContent: 'space-between',
-                }} >
-                    <Cards />
-                </View>
-            </ScrollView>
+            </Animated.View>
         </View >
     )
 }

@@ -7,32 +7,19 @@ const CatogoreTiles = () => {
         {
             id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
             title: 'Sneakers',
-            image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png'
+            image: require('../images/redShoes.png')
         },
         {
             id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
             title: 'Watch',
-            image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png'
-
+            image: require('../images/SmartwatchPro.png'),
         },
         {
             id: '58694a0f-3da1-4ss71f-bd96-145571e29d72',
             title: 'Backpack',
-            image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png'
-
+            image: require('../images/TravelBackpack.png'),
         },
-        {
-            id: '58694a0f-3da1-471f-sfsfsffsbd96-145571e29d72',
-            title: 'Backpack',
-            image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png'
 
-        },
-        {
-            id: '58694a0ffssf-3da1-471f-bd96-145571e29d72',
-            title: 'Backpack',
-            image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png'
-
-        },
     ];
     const Item = ({ item }) => (
         <ScrollView style={styles.tiles} >
@@ -45,7 +32,7 @@ const CatogoreTiles = () => {
                 alignItems: 'center'
             }}>
 
-                <Image style={{ width: 60, height: 40, resizeMode: 'contain' }} source={{ uri: item.image }} />
+                <Image style={{ width: 60, height: 40, resizeMode: 'contain' }} source={item.image} />
                 <Text style={styles.tilesText}>{item.title}</Text>
             </TouchableOpacity>
         </ScrollView>
